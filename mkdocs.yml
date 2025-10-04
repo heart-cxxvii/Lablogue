@@ -1,0 +1,20 @@
+site_name: Lablogue Consulting
+site_description: 韓国大学院×データ活用のオンラインコンサル。Zoomで面談、予約はCalendly、決済はStripeに対応。
+site_url: https://example.com
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.instant
+    - navigation.tracking
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - sitemap:
+      changefreq: monthly
+      priority: 0.6
+extra:
+  generator: false
+nav:
+  - ホーム: index.md
