@@ -1,20 +1,719 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lablogue, Korea</title>
-    <link rel="stylesheet" href="assets/styles.css" />
-  </head>
-  <body>
-    <header>
-      <img src="assets/logo.png" alt="Lablogue logo" width="120" />
-      <h1>Lablogue, Korea</h1>
-      <p>韓国大学院を“最短ルート”で。</p>
-    </header>
-    <main>
-      <h2>サイト準備中</h2>
-      <p>このページはGitHub Pagesでホスティングされています。</p>
-    </main>
-  </body>
-</html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Lablogue, Korea</title><style>
+    /* cspell:disable-file */
+    /* webkit printing magic: print all background colors */
+    html {
+        -webkit-print-color-adjust: exact;
+    }
+    * {
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact;
+    }
+    
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    @media only screen {
+        body {
+            margin: 2em auto;
+            max-width: 900px;
+            color: rgb(55, 53, 47);
+        }
+    }
+    
+    body {
+        line-height: 1.5;
+        white-space: pre-wrap;
+    }
+    
+    a,
+    a.visited {
+        color: inherit;
+        text-decoration: underline;
+    }
+    
+    .pdf-relative-link-path {
+        font-size: 80%;
+        color: #444;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 0.75em;
+    }
+    
+    h1 {
+        font-size: 1.875rem;
+        margin-top: 1.875rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+        margin-top: 1.25rem;
+    }
+    
+    .source {
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 1.5em;
+        word-break: break-all;
+    }
+    
+    .callout {
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    
+    figure {
+        margin: 1.25em 0;
+        page-break-inside: avoid;
+    }
+    
+    figcaption {
+        opacity: 0.5;
+        font-size: 85%;
+        margin-top: 0.5em;
+    }
+    
+    mark {
+        background-color: transparent;
+    }
+    
+    .indented {
+        padding-left: 1.5em;
+    }
+    
+    hr {
+        background: transparent;
+        display: block;
+        width: 100%;
+        height: 1px;
+        visibility: visible;
+        border: none;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    @media only print {
+        img {
+            max-height: 100vh;
+            object-fit: contain;
+        }
+    }
+    
+    @page {
+        margin: 1in;
+    }
+    
+    .collection-content {
+        font-size: 0.875rem;
+    }
+    
+    .collection-content td {
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+    
+    .column-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .column {
+        padding: 0 1em;
+    }
+    
+    .column:first-child {
+        padding-left: 0;
+    }
+    
+    .column:last-child {
+        padding-right: 0;
+    }
+    
+    .table_of_contents-item {
+        display: block;
+        font-size: 0.875rem;
+        line-height: 1.3;
+        padding: 0.125rem;
+    }
+    
+    .table_of_contents-indent-1 {
+        margin-left: 1.5rem;
+    }
+    
+    .table_of_contents-indent-2 {
+        margin-left: 3rem;
+    }
+    
+    .table_of_contents-indent-3 {
+        margin-left: 4.5rem;
+    }
+    
+    .table_of_contents-link {
+        text-decoration: none;
+        opacity: 0.7;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid rgba(55, 53, 47, 0.09);
+        border-collapse: collapse;
+    }
+    
+    table {
+        border-left: none;
+        border-right: none;
+    }
+    
+    th,
+    td {
+        font-weight: normal;
+        padding: 0.25em 0.5em;
+        line-height: 1.5;
+        min-height: 1.5em;
+        text-align: left;
+    }
+    
+    th {
+        color: rgba(55, 53, 47, 0.6);
+    }
+    
+    ol,
+    ul {
+        margin: 0;
+        margin-block-start: 0.6em;
+        margin-block-end: 0.6em;
+    }
+    
+    li > ol:first-child,
+    li > ul:first-child {
+        margin-block-start: 0.6em;
+    }
+    
+    ul > li {
+        list-style: disc;
+    }
+    
+    ul.to-do-list {
+        padding-inline-start: 0;
+    }
+    
+    ul.to-do-list > li {
+        list-style: none;
+    }
+    
+    .to-do-children-checked {
+        text-decoration: line-through;
+        opacity: 0.375;
+    }
+    
+    ul.toggle > li {
+        list-style: none;
+    }
+    
+    ul {
+        padding-inline-start: 1.7em;
+    }
+    
+    ul > li {
+        padding-left: 0.1em;
+    }
+    
+    ol {
+        padding-inline-start: 1.6em;
+    }
+    
+    ol > li {
+        padding-left: 0.2em;
+    }
+    
+    .mono ol {
+        padding-inline-start: 2em;
+    }
+    
+    .mono ol > li {
+        text-indent: -0.4em;
+    }
+    
+    .toggle {
+        padding-inline-start: 0em;
+        list-style-type: none;
+    }
+    
+    /* Indent toggle children */
+    .toggle > li > details {
+        padding-left: 1.7em;
+    }
+    
+    .toggle > li > details > summary {
+        margin-left: -1.1em;
+    }
+    
+    .selected-value {
+        display: inline-block;
+        padding: 0 0.5em;
+        background: rgba(206, 205, 202, 0.5);
+        border-radius: 3px;
+        margin-right: 0.5em;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        white-space: nowrap;
+    }
+    
+    .collection-title {
+        display: inline-block;
+        margin-right: 1em;
+    }
+    
+    .page-description {
+        margin-bottom: 2em;
+    }
+    
+    .simple-table {
+        margin-top: 1em;
+        font-size: 0.875rem;
+        empty-cells: show;
+    }
+    .simple-table td {
+        height: 29px;
+        min-width: 120px;
+    }
+    
+    .simple-table th {
+        height: 29px;
+        min-width: 120px;
+    }
+    
+    .simple-table-header-color {
+        background: rgb(247, 246, 243);
+        color: black;
+    }
+    .simple-table-header {
+        font-weight: 500;
+    }
+    
+    time {
+        opacity: 0.5;
+    }
+    
+    .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1.2em;
+        max-height: 1.2em;
+        text-decoration: none;
+        vertical-align: text-bottom;
+        margin-right: 0.5em;
+    }
+    
+    img.icon {
+        border-radius: 3px;
+    }
+    
+    .callout img.notion-static-icon {
+        width: 1em;
+        height: 1em;
+    }
+    
+    .callout p {
+        margin: 0;
+    }
+    
+    .callout h1,
+    .callout h2,
+    .callout h3 {
+        margin: 0 0 0.6rem;
+    }
+    
+    .user-icon {
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 100%;
+        margin-right: 0.5rem;
+    }
+    
+    .user-icon-inner {
+        font-size: 0.8em;
+    }
+    
+    .text-icon {
+        border: 1px solid #000;
+        text-align: center;
+    }
+    
+    .page-cover-image {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        max-height: 30vh;
+    }
+    
+    .page-header-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .page-header-icon-with-cover {
+        margin-top: -0.72em;
+        margin-left: 0.07em;
+    }
+    
+    .page-header-icon img {
+        border-radius: 3px;
+    }
+    
+    .link-to-page {
+        margin: 1em 0;
+        padding: 0;
+        border: none;
+        font-weight: 500;
+    }
+    
+    p > .user {
+        opacity: 0.5;
+    }
+    
+    td > .user,
+    td > time {
+        white-space: nowrap;
+    }
+    
+    input[type="checkbox"] {
+        transform: scale(1.5);
+        margin-right: 0.6em;
+        vertical-align: middle;
+    }
+    
+    p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    
+    .image {
+        border: none;
+        margin: 1.5em 0;
+        padding: 0;
+        border-radius: 0;
+        text-align: center;
+    }
+    
+    .code,
+    code {
+        background: rgba(135, 131, 120, 0.15);
+        border-radius: 3px;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-size: 85%;
+        tab-size: 2;
+    }
+    
+    code {
+        color: #eb5757;
+    }
+    
+    .code {
+        padding: 1.5em 1em;
+    }
+    
+    .code-wrap {
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+    
+    .code > code {
+        background: none;
+        padding: 0;
+        font-size: 100%;
+        color: inherit;
+    }
+    
+    blockquote {
+        font-size: 1em;
+        margin: 1em 0;
+        padding-left: 1em;
+        border-left: 3px solid rgb(55, 53, 47);
+    }
+    
+    blockquote.quote-large {
+        font-size: 1.25em;
+    }
+    
+    .bookmark {
+        text-decoration: none;
+        max-height: 8em;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+    }
+    
+    .bookmark-title {
+        font-size: 0.85em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 1.75em;
+        white-space: nowrap;
+    }
+    
+    .bookmark-text {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bookmark-info {
+        flex: 4 1 180px;
+        padding: 12px 14px 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .bookmark-image {
+        width: 33%;
+        flex: 1 1 180px;
+        display: block;
+        position: relative;
+        object-fit: cover;
+        border-radius: 1px;
+    }
+    
+    .bookmark-description {
+        color: rgba(55, 53, 47, 0.6);
+        font-size: 0.75em;
+        overflow: hidden;
+        max-height: 4.5em;
+        word-break: break-word;
+    }
+    
+    .bookmark-href {
+        font-size: 0.75em;
+        margin-top: 0.25em;
+    }
+    
+    .sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+    .code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+    .serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+    .mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+    .pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+    .pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+    .pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+    .pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+    .pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+    .pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+    .pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+    .pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+    .pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+    .pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+    .pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+    .pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+    .pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+    .pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+    .pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+    .pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+    .highlight-default {
+        color: rgba(44, 44, 43, 1);
+    }
+    .highlight-gray {
+        color: rgba(134, 131, 126, 1);
+        fill: rgba(134, 131, 126, 1);
+    }
+    .highlight-brown {
+        color: rgba(159, 118, 90, 1);
+        fill: rgba(159, 118, 90, 1);
+    }
+    .highlight-orange {
+        color: rgba(210, 123, 45, 1);
+        fill: rgba(210, 123, 45, 1);
+    }
+    .highlight-yellow {
+        color: rgba(203, 148, 52, 1);
+        fill: rgba(203, 148, 52, 1);
+    }
+    .highlight-teal {
+        color: rgba(80, 148, 110, 1);
+        fill: rgba(80, 148, 110, 1);
+    }
+    .highlight-blue {
+        color: rgba(63, 126, 190, 1);
+        fill: rgba(63, 126, 190, 1);
+    }
+    .highlight-purple {
+        color: rgba(154, 107, 180, 1);
+        fill: rgba(154, 107, 180, 1);
+    }
+    .highlight-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+    }
+    .highlight-red {
+        color: rgba(207, 81, 72, 1);
+        fill: rgba(207, 81, 72, 1);
+    }
+    .highlight-default_background {
+        color: rgba(44, 44, 43, 1);
+    }
+    .highlight-gray_background {
+        background: rgba(42, 28, 0, 0.07);
+    }
+    .highlight-brown_background {
+        background: rgba(139, 46, 0, 0.086);
+    }
+    .highlight-orange_background {
+        background: rgba(224, 101, 1, 0.129);
+    }
+    .highlight-yellow_background {
+        background: rgba(211, 168, 0, 0.137);
+    }
+    .highlight-teal_background {
+        background: rgba(0, 100, 45, 0.09);
+    }
+    .highlight-blue_background {
+        background: rgba(0, 111, 200, 0.09);
+    }
+    .highlight-purple_background {
+        background: rgba(102, 0, 178, 0.078);
+    }
+    .highlight-pink_background {
+        background: rgba(197, 0, 93, 0.086);
+    }
+    .highlight-red_background {
+        background: rgba(223, 22, 0, 0.094);
+    }
+    .block-color-default {
+        color: inherit;
+        fill: inherit;
+    }
+    .block-color-gray {
+        color: rgba(134, 131, 126, 1);
+        fill: rgba(134, 131, 126, 1);
+    }
+    .block-color-brown {
+        color: rgba(159, 118, 90, 1);
+        fill: rgba(159, 118, 90, 1);
+    }
+    .block-color-orange {
+        color: rgba(210, 123, 45, 1);
+        fill: rgba(210, 123, 45, 1);
+    }
+    .block-color-yellow {
+        color: rgba(203, 148, 52, 1);
+        fill: rgba(203, 148, 52, 1);
+    }
+    .block-color-teal {
+        color: rgba(80, 148, 110, 1);
+        fill: rgba(80, 148, 110, 1);
+    }
+    .block-color-blue {
+        color: rgba(63, 126, 190, 1);
+        fill: rgba(63, 126, 190, 1);
+    }
+    .block-color-purple {
+        color: rgba(154, 107, 180, 1);
+        fill: rgba(154, 107, 180, 1);
+    }
+    .block-color-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+    }
+    .block-color-red {
+        color: rgba(207, 81, 72, 1);
+        fill: rgba(207, 81, 72, 1);
+    }
+    .block-color-default_background {
+        color: inherit;
+        fill: inherit;
+    }
+    .block-color-gray_background {
+        background: rgba(240, 239, 237, 1);
+    }
+    .block-color-brown_background {
+        background: rgba(245, 237, 233, 1);
+    }
+    .block-color-orange_background {
+        background: rgba(251, 235, 222, 1);
+    }
+    .block-color-yellow_background {
+        background: rgba(249, 243, 220, 1);
+    }
+    .block-color-teal_background {
+        background: rgba(232, 241, 236, 1);
+    }
+    .block-color-blue_background {
+        background: rgba(232, 242, 250, 1);
+    }
+    .block-color-purple_background {
+        background: rgba(243, 235, 249, 1);
+    }
+    .block-color-pink_background {
+        background: rgba(250, 233, 241, 1);
+    }
+    .block-color-red_background {
+        background: rgba(252, 233, 231, 1);
+    }
+    .select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+    .select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+    .select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+    .select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+    .select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+    .select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+    .select-value-color-blue { background-color: rgba(0, 99, 174, 0.172); }
+    .select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+    .select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+    .select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+    
+    .checkbox {
+        display: inline-flex;
+        vertical-align: text-bottom;
+        width: 16;
+        height: 16;
+        background-size: 16px;
+        margin-left: 2px;
+        margin-right: 5px;
+    }
+    
+    .checkbox-on {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+    
+    .checkbox-off {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+        
+    </style></head><body><article id="260c5ccc-4fee-80f6-91b2-e9cb1a711ea5" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_transonic_tunnel.jpg" style="object-position:center 60%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="notion_files/S__216956930.jpg"/></div><h1 class="page-title">Lablogue, Korea</h1><p class="page-description"></p></header><div class="page-body"><p id="266c5ccc-4fee-8037-9b48-d0b3b2eabd49" class="">
+    </p><hr id="266c5ccc-4fee-804d-9dad-ec22d251b37a"/><h1 id="266c5ccc-4fee-8043-9df5-dac1f620f05d" class="">韓国の大学院進学ならLablogue，</h1><h2 id="266c5ccc-4fee-80e6-ba81-ef002a56d7a4" class=""><strong>ラボログのサポート</strong></h2><p id="275c5ccc-4fee-80b4-a66e-d78c5fa6b4b2" class="">留学準備は、目指す大学や現状の力によって本当に十人十色です。</p><p id="275c5ccc-4fee-80dc-8acd-e2cf721a9082" class="">ラボログでは、皆さま一人ひとりの<strong>強みと課題を分析</strong>し、</p><ul id="275c5ccc-4fee-8057-ba44-c569d00a900f" class="bulleted-list"><li style="list-style-type:disc"><em><strong>志望校・研究室選び</strong></em></li></ul><ul id="275c5ccc-4fee-8093-b03e-cb56cf326653" class="bulleted-list"><li style="list-style-type:disc"><em><strong>教授へのコンタクト</strong></em></li></ul><ul id="275c5ccc-4fee-808b-9737-e2b69ad52242" class="bulleted-list"><li style="list-style-type:disc"><em><strong>志望動機や研究計画書の構成・添削</strong></em></li></ul><p id="275c5ccc-4fee-8014-9e9c-d6906ead935e" class="">といった出願までのプロセスを全力でサポートします。</p><p id="266c5ccc-4fee-8023-b09a-e891e0542ae4" class="">
+    </p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="277c5ccc-4fee-8088-ae9d-d4280454f14b"><div style="width:100%"><h1 id="266c5ccc-4fee-80b3-bb2d-f3f37d2f22f8" class="">韓国大学院を“最短ルート”で</h1><h2 id="277c5ccc-4fee-80dd-b3b5-c4e1523fdac0" class="">LINEでまずは“無料相談”</h2><p id="277c5ccc-4fee-806a-8b10-e4e75ee4d098" class="">ボタンひとつで無料相談の予約ができます。</p></div></figure><p id="277c5ccc-4fee-805e-9b5d-e0d6ffb029cc" class="">
+    </p><h1 id="260c5ccc-4fee-8055-97ce-ccaa8e08a685" class="">提供プラン・料金一覧</h1><p id="275c5ccc-4fee-80f8-8d67-cd14475ae0d2" class="">ラボログでは、<strong><span style="border-bottom:0.05em solid">入学金・退会金は一切いただきません</span></strong><strong>。</strong></p><p id="275c5ccc-4fee-80c5-83f7-fe09450db408" class="">受講したコース分のみ料金が発生いたします。</p><hr id="260c5ccc-4fee-8036-96e5-d150baca6682"/><p id="277c5ccc-4fee-8032-b278-c5256344ed7e" class="">
+    </p><h2 id="266c5ccc-4fee-802a-b88a-fb9f20847509" class="">Seed｜きっかけ相談プラン</h2><hr id="266c5ccc-4fee-8093-8290-d92fe8b315cc"/><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="266c5ccc-4fee-8046-94fa-e5cefd0c5277"><div style="width:100%"><p id="275c5ccc-4fee-80f7-8c8f-d9111f761073" class="">こんな方にオススメ！</p><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="275c5ccc-4fee-8074-9feb-c997420a2d4e"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/thought-dialogue_gray.svg"/></div><div style="width:100%"><p id="275c5ccc-4fee-801e-b646-ed81bd12231a" class="">韓国大学院に興味があるが何をしたらいいかわからない方</p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="275c5ccc-4fee-8009-804c-c7bd8941147d"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/thought-dialogue_gray.svg"/></div><div style="width:100%"><p id="275c5ccc-4fee-8085-bed4-d7b66934aa1f" class="">両親や周囲を説得できる志望動機、大学院卒業後のキャリアについてサポートを受けつつはっきりさせたい方</p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="275c5ccc-4fee-809f-ac6a-d5c5d528c37a"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/thought-dialogue_gray.svg"/></div><div style="width:100%"><p id="275c5ccc-4fee-804f-bf66-fb61d800e2d9" class="">韓国語、英語のスコアや大学での成績がないため留学できるか心配な方</p></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="277c5ccc-4fee-803b-a66f-d2eaf7214cf9"><div style="width:100%"><p id="277c5ccc-4fee-80c3-878a-c6c7f76276a2" class="">1回 (30分) : 9,000円</p></div></figure></div></figure><p id="277c5ccc-4fee-807b-8c60-e9eb79698783" class="">
+    </p><h2 id="266c5ccc-4fee-809d-a666-e28497b9f5ff" class="">Lab｜志望校設計プラン</h2><hr id="266c5ccc-4fee-80e6-a99f-c9b73d37ca5e"/><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="266c5ccc-4fee-80d7-927b-df3426d8e309"><div style="width:100%"><p id="277c5ccc-4fee-80a5-9a8b-fefb909c6fb2" class="">こんな方にオススメ！</p><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="275c5ccc-4fee-807e-a315-e57e974bf780"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/thought-dialogue_gray.svg"/></div><div style="width:100%"><p id="275c5ccc-4fee-8006-b7bf-e74b8d677419" class="">自分の目的にピッタリ合う大学院、研究室を比較して探したい方</p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="275c5ccc-4fee-8098-9416-d8f4ede5f3ff"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/thought-dialogue_gray.svg"/></div><div style="width:100%"><p id="275c5ccc-4fee-8049-8b43-f901d76c9196" class="">教授や研究室とコンタクトを取りたいがやり方がわからない方教授や研究室とコンタクトを取りたいがやり方がわからない方</p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="277c5ccc-4fee-802f-8ae9-fa8a438ac2dd"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/thought-dialogue_gray.svg"/></div><div style="width:100%"><p id="277c5ccc-4fee-8015-9cc9-c48d8b07e03d" class="">出願準備で困った時にすぐ相談できるようにしたい方</p></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="277c5ccc-4fee-8064-b145-cb6380f98f61"><div style="width:100%"><p id="277c5ccc-4fee-8066-9209-dda734d26dac" class="">全6回 (30分) : 35,000円</p><p id="277c5ccc-4fee-807a-837f-c92f8b6a4a69" class="">追加分1回 (30分) : 5,000円</p></div></figure></div></figure><p id="277c5ccc-4fee-80cc-b852-c57510c492c0" class="">
+    </p><h2 id="266c5ccc-4fee-8034-847f-f775ea9adc4c" class="">Launch｜出願コンサルティングプラン</h2><hr id="266c5ccc-4fee-8024-bb61-ec92e5b4419d"/><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="266c5ccc-4fee-80c3-843a-eaf5a5c83bc0"><div style="width:100%"><p id="277c5ccc-4fee-80c4-b032-e8682315be5c" class="">こんな方にオススメ！</p><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="275c5ccc-4fee-8067-b05a-c197ede50975"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/thought-dialogue_gray.svg"/></div><div style="width:100%"><p id="275c5ccc-4fee-80f1-94da-d97a5274f2c9" class="">志望理由書、研究計画書の内容を<strong>1から相談して添削まで</strong>受けたい方</p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="275c5ccc-4fee-80d3-83a9-d114e63a9316"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/thought-dialogue_gray.svg"/></div><div style="width:100%"><p id="275c5ccc-4fee-809a-813e-ce50508adf8e" class="">出願まで時間がないため、<strong>最短で出願までの伴走サポート</strong>を受けたい方</p></div></figure><figure class="block-color-default_background callout" style="white-space:pre-wrap;display:flex" id="275c5ccc-4fee-8082-9c74-e42e289e8f77"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/thought-dialogue_gray.svg"/></div><div style="width:100%"><p id="275c5ccc-4fee-805a-92fb-ec5f56042a65" class="">韓国大学院出願まで、内容を絞らず<strong>総合的なサポート</strong>が欲しい方</p></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="277c5ccc-4fee-8092-8189-f06e5d0618d8"><div style="width:100%"><p id="277c5ccc-4fee-80f5-921c-d52dace9b5c5" class="">無制限 (30分) : 120,000円</p></div></figure></div></figure><h1 id="266c5ccc-4fee-8096-a7bb-d9661f596881" class="">対応内容 (スマホの場合は横にスクロール)</h1><p id="277c5ccc-4fee-80b4-aeef-e187232ca9b1" class="">※各回30分で行います</p><hr id="266c5ccc-4fee-8060-a28f-ea31b2423d39"/><table id="266c5ccc-4fee-8006-9799-d458abfb7ab3" class="simple-table"><thead class="simple-table-header"><tr id="266c5ccc-4fee-8043-9952-ff8de6c57ba0"><th id="t[&lt;j" class="simple-table-header-color simple-table-header" style="width:176.75px">内容</th><th id="bhLy" class="simple-table-header-color simple-table-header" style="width:176.75px">Seed 1回: 9,000円</th><th id="eBTs" class="simple-table-header-color simple-table-header" style="width:176.75px">Lab 全6回 : 35,000円</th><th id="W{yd" class="simple-table-header-color simple-table-header" style="width:176.75px">Launch 無制限: 120,000円</th></tr></thead><tbody><tr id="266c5ccc-4fee-80b0-87b1-cfc2c9187306"><td id="t[&lt;j" class="" style="width:176.75px">進路相談（韓国に行く理由の言語化など）</td><td id="bhLy" class="" style="width:176.75px">✅</td><td id="eBTs" class="" style="width:176.75px">✅</td><td id="W{yd" class="" style="width:176.75px">✅</td></tr><tr id="266c5ccc-4fee-809b-a36a-f78bfe237758"><td id="t[&lt;j" class="" style="width:176.75px">韓国大学院の基礎Q&amp;A</td><td id="bhLy" class="" style="width:176.75px">✅</td><td id="eBTs" class="" style="width:176.75px">✅</td><td id="W{yd" class="" style="width:176.75px">✅</td></tr><tr id="266c5ccc-4fee-8090-aefa-c3f2995f2009"><td id="t[&lt;j" class="" style="width:176.75px">現状確認（専攻・語学・期日・費用）</td><td id="bhLy" class="" style="width:176.75px">✅</td><td id="eBTs" class="" style="width:176.75px">✅</td><td id="W{yd" class="" style="width:176.75px">✅</td></tr><tr id="266c5ccc-4fee-8013-afae-d2e9f4579bd0"><td id="t[&lt;j" class="" style="width:176.75px">志望校比較</td><td id="bhLy" class="" style="width:176.75px">❌</td><td id="eBTs" class="" style="width:176.75px">✅</td><td id="W{yd" class="" style="width:176.75px">✅</td></tr><tr id="266c5ccc-4fee-80d2-ac1a-d07c2f491d66"><td id="t[&lt;j" class="" style="width:176.75px">教授/研究室リストアップ</td><td id="bhLy" class="" style="width:176.75px">❌</td><td id="eBTs" class="" style="width:176.75px">✅</td><td id="W{yd" class="" style="width:176.75px">✅</td></tr><tr id="266c5ccc-4fee-80cc-885b-da01bbc20b56"><td id="t[&lt;j" class="" style="width:176.75px">関連論文/活動リサーチ</td><td id="bhLy" class="" style="width:176.75px">❌</td><td id="eBTs" class="" style="width:176.75px">✅</td><td id="W{yd" class="" style="width:176.75px">✅</td></tr><tr id="266c5ccc-4fee-80ca-bbe3-e279f4746d6c"><td id="t[&lt;j" class="" style="width:176.75px">教授コンタクトサポート</td><td id="bhLy" class="" style="width:176.75px">❌</td><td id="eBTs" class="" style="width:176.75px">✅</td><td id="W{yd" class="" style="width:176.75px">✅</td></tr><tr id="266c5ccc-4fee-8040-ba27-de124728cebd"><td id="t[&lt;j" class="" style="width:176.75px">送る前の文面チェック</td><td id="bhLy" class="" style="width:176.75px">❌</td><td id="eBTs" class="" style="width:176.75px">✅</td><td id="W{yd" class="" style="width:176.75px">✅</td></tr><tr id="266c5ccc-4fee-80db-a23a-fa0b699ff170"><td id="t[&lt;j" class="" style="width:176.75px">LINEでの質問対応（登録中のフォロー）</td><td id="bhLy" class="" style="width:176.75px">❌</td><td id="eBTs" class="" style="width:176.75px">✅</td><td id="W{yd" class="" style="width:176.75px">✅</td></tr><tr id="266c5ccc-4fee-80ee-85c4-c9434cb377fa"><td id="t[&lt;j" class="" style="width:176.75px">教授アポイント内容確認</td><td id="bhLy" class="" style="width:176.75px">❌</td><td id="eBTs" class="" style="width:176.75px">❌</td><td id="W{yd" class="" style="width:176.75px">✅</td></tr><tr id="266c5ccc-4fee-8047-815c-f0be6fe099ed"><td id="t[&lt;j" class="" style="width:176.75px">志望理由書/研究計画の下書</td><td id="bhLy" class="" style="width:176.75px">❌</td><td id="eBTs" class="" style="width:176.75px">❌</td><td id="W{yd" class="" style="width:176.75px">✅</td></tr><tr id="266c5ccc-4fee-80c9-9c3d-c176a8ac755d"><td id="t[&lt;j" class="" style="width:176.75px">書類の添削（構成・論旨のフィードバック）</td><td id="bhLy" class="" style="width:176.75px">❌</td><td id="eBTs" class="" style="width:176.75px">❌</td><td id="W{yd" class="" style="width:176.75px">✅</td></tr><tr id="266c5ccc-4fee-802c-8715-c362b7008a6b"><td id="t[&lt;j" class="" style="width:176.75px">CV／履歴書フォーマット整備</td><td id="bhLy" class="" style="width:176.75px">❌</td><td id="eBTs" class="" style="width:176.75px">❌</td><td id="W{yd" class="" style="width:176.75px">✅ </td></tr></tbody></table><h3 id="277c5ccc-4fee-809e-9a65-f5bdafac81ce" class=""><em><mark class="highlight-gray">※ 対応内容はあくまで参考例であり内容は生徒ごとに相談の上で柔軟に設定できます。</mark></em></h3><h3 id="266c5ccc-4fee-800c-9832-f0410783b060" class=""><em><mark class="highlight-gray">※ LabプランにはSeedプランの内容が、LaunchプランにはSeed, Labプランの両方が包含されています。</mark></em></h3><p id="277c5ccc-4fee-806c-a6ff-d04ee6cdb70d" class="">
+    </p><p id="277c5ccc-4fee-8000-9b62-d35ea3c91db6" class="">
+    </p><p id="260c5ccc-4fee-8069-b7e9-e9f6c50c5495" class="">
+    </p><hr id="260c5ccc-4fee-80e1-b5f1-cf2f5533683e"/><h2 id="260c5ccc-4fee-809e-a8b8-d2cb6fe8f6de" class="">よくある質問</h2><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="266c5ccc-4fee-80f5-b3c5-c93f2a61f069"><div style="width:100%"><p id="260c5ccc-4fee-80ca-9828-cf1062f89c36" class=""><strong>Q. 代筆や丸ごと作成を依頼することは可能ですか？</strong></p><p id="260c5ccc-4fee-8085-a016-f09b080c109b" class="">A. 不可です。構成設計・論理整理・表現改善の <strong>編集支援</strong> は行います。</p></div></figure><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="266c5ccc-4fee-8000-adca-dd9351975761"><div style="width:100%"><p id="260c5ccc-4fee-8095-8b50-d1dcd5b1759f" class=""><strong>Q. 面接対策やビザの相談は？</strong></p><p id="260c5ccc-4fee-809a-a4ce-f90ed04648e6" class="">A. 範囲外です（一般情報の共有は可／必ずご自身で確認をお願いします）。</p></div></figure><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="266c5ccc-4fee-8005-9f28-ffb9f307024e"><div style="width:100%"><p id="260c5ccc-4fee-80ab-866b-c7a7f9e95396" class=""><strong>Q. 返金・キャンセルは？</strong></p><p id="260c5ccc-4fee-8012-9aaa-fef6deef83d7" class="">A. キャンセルは<strong>原則不可</strong>、日程変更は <strong>24時間前まで</strong> 受け付けます。無断キャンセルは返金不可。 Launchプラン (Premium)は着手後の返金不可。</p></div></figure><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="266c5ccc-4fee-8016-83bf-f097c38f2f53"><div style="width:100%"><p id="260c5ccc-4fee-8023-a110-ea8ab650e847" class=""><strong>Q. 連絡手段は？</strong></p><p id="260c5ccc-4fee-805a-8a8c-c14ad792a084" class="">A. 面談＝Zoom、テキスト＝公式LINEでの返信になります。</p></div></figure><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="266c5ccc-4fee-80a7-af60-f831b0a206f9"><div style="width:100%"><p id="260c5ccc-4fee-8025-bf5e-cf0a25aa77d5" class=""><strong>Q. 同時受け入れの上限は？</strong></p><p id="260c5ccc-4fee-8018-9e00-c083b9eaa146" class="">A. プレミアは同時<mark class="highlight-red"><strong> 3名 </strong></mark>まで（枠が埋まり次第、翌月受付）。</p></div></figure><hr id="260c5ccc-4fee-8042-b550-f5f07e06e6d9"/><h1 id="266c5ccc-4fee-807c-b2d1-dffffac735a8" class="block-color-default_background"><strong>Follow us!</strong></h1><div id="266c5ccc-4fee-801c-bc3a-d5a5f783d772" class="column-list"><div id="266c5ccc-4fee-8076-a7ac-e92472a04f57" style="width:33.333333333333336%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="266c5ccc-4fee-80aa-9fb9-cb0eb755c69c"><div style="font-size:1.5em"><img class="icon" src="notion_files/YouTube.png"/></div><div style="width:100%"><mark class="highlight-blue"><strong><a href="https://www.youtube.com/channel/UC2CUQdvrhty2iUxZunuC2Ow">YouTube</a></strong></mark></div></figure></div><div id="266c5ccc-4fee-80a8-bd55-ddf03166e504" style="width:33.33333333333333%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="266c5ccc-4fee-80e0-9e19-e6877713567d"><div style="font-size:1.5em"><img class="icon" src="notion_files/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2025-09-07_%E5%8D%88%E5%89%8D1.03.38.png"/></div><div style="width:100%"><mark class="highlight-blue"><strong><a href="https://x.com/lablogue">X</a></strong></mark></div></figure></div><div id="266c5ccc-4fee-8020-9a95-cfefe5ff7336" style="width:33.333333333333336%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="266c5ccc-4fee-8001-b644-f48d5117defa"><div style="font-size:1.5em"><img class="icon" src="notion_files/IG.png"/></div><div style="width:100%"><mark class="highlight-blue"><strong><a href="https://www.instagram.com/lablogue.official/">Instagram</a></strong></mark></div></figure></div></div><h1 id="266c5ccc-4fee-804f-bc43-fea2a8d34155" class="">Contact us!</h1><p id="277c5ccc-4fee-80b1-8bba-c840ce59fabd" class="">
+    </p><figure id="266c5ccc-4fee-808e-a3c7-d7e563f122b4"><div class="source"><a href="https://noteforms.com/forms/teaim0">https://noteforms.com/forms/teaim0</a></div></figure><p id="277c5ccc-4fee-8000-869a-cdc2d05a8e29" class="">
+    </p><p id="277c5ccc-4fee-804a-9b43-ecdcf30aba0a" class="">
+    </p><p id="26ec5ccc-4fee-808b-9aca-e70e4a23345e" class="">──────────────────────────────</p><p id="26ec5ccc-4fee-807f-bead-e87344a07dd4" class="">© 2025 Lablogue, All Rights Reserved.</p><p id="26ec5ccc-4fee-80c5-a3e6-db4f07687bde" class="">お仕事お問い合わせ：lablogue.channel@gmail.com</p><p id="277c5ccc-4fee-8030-9bdf-fc5dda3c9777" class=""><a href="https://www.notion.so/260c5ccc4fee808f9314e478011acbcb?pvs=21">利用規約・プライバシーポリシー等</a></p><p id="26ec5ccc-4fee-8001-9799-c2cd7dfc63b2" class="">
+    </p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
